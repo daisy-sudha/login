@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, 
-          MatCardModule, 
           MatMenuModule, 
           MatToolbarModule,
           MatIconModule,
@@ -19,7 +20,16 @@ import { MatButtonModule,
           MatRadioModule,
           MatSliderModule,
           MatSlideToggleModule,
-          MatSidenavContent} from '@angular/material';
+          MatCardModule,
+        MatSidenavModule,
+        MatButtonToggleModule,
+        MatGridListModule,
+        MatFormFieldControl,
+        MatListModule,
+        MatProgressBarModule,
+        MatProgressSpinnerModule,
+        MatTabsModule
+      } from '@angular/material';
 
 import 'hammerjs';
 import { AppComponent } from './app.component';
@@ -42,7 +52,6 @@ import { routing } from './app.routing';
     BrowserAnimationsModule,
     MatButtonModule,
     MatMenuModule,
-    MatCardModule,
     MatToolbarModule,
     MatIconModule,
     MatFormFieldModule,
@@ -57,7 +66,16 @@ import { routing } from './app.routing';
     MatSliderModule,
     MatSlideToggleModule,
     MatMenuModule,
-    MatSidenavContent
+    MatSidenavModule,
+    MatCardModule,
+    MatButtonToggleModule,
+    MatGridListModule,
+    MatFormFieldModule,
+    MatListModule,
+    MatGridListModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

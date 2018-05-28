@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map'
 import { FormControl } from '@angular/forms';
@@ -9,6 +9,8 @@ import { FormControl } from '@angular/forms';
   templateUrl: './myform.component.html',
   styleUrls: ['./myform.component.css']
 })
+
+
 export class MyformComponent implements OnInit {
 
   // constructor() { }

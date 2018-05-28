@@ -1,12 +1,26 @@
-
 <!-- toolbar -->
+
 <mat-toolbar color="primary">
-  Angular Material 2 App
-</mat-toolbar>
+    <!-- <span> <mat-icon>mood</mat-icon> </span> -->
+     
+        <button mat-raised-button
+                mat-tooltip="E.T. phone home"
+                tooltip-position="below">
+          <mat-icon color="accent">home</mat-icon>
+        </button>
+      
+    <span class="example-fill-remaining-space"></span>
+    <span>Angular App</span>
+    <span class="example-fill-remaining-space"></span>
+    <button mat-icon-button [mat-menu-trigger-for]="menu">
+     <mat-icon>more_vert</mat-icon>
+    </button>
+  </mat-toolbar>
 
 
+<hr>
 <!-- button -->
-<button mat-button>Click me!</button>
+<button mat-button color="accent" >Click me!</button>
 
 
 <!-- form -->
@@ -104,8 +118,178 @@
 </mat-menu>
 
 <!-- sidenav -->
-<h3>sidenav</h3>
+<!-- <h3>sidenav</h3>
 <mat-sidenav-container class="example-container" *ngIf="shouldRun">
   <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
   <mat-sidenav-content>Main content</mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> -->
+
+<!-- sidenav -->
+<h3>sidenav</h3>
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened="true">Drawer content</mat-drawer>
+  <mat-drawer-content>Main content</mat-drawer-content>
+</mat-drawer-container>
+
+<!-- card -->
+<h3>card</h3>
+<mat-card class="card-pic">
+  <mat-card-header>
+      <img mat-card-avatar src="http://www.bhmpics.com/thumbs/small_blue_bird-t3.jpg">
+      <mat-card-title>Cards are the best</mat-card-title>
+      <mat-card-subtitle>Really, they are!</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="http://www.hdnicewallpapers.com/Walls/Normal/Parrot/Green_Parrot_HD_Wallpaper.jpg">
+  <mat-card-content>
+      <p>Something pretty...</p>
+    </mat-card-content>
+  <button mat-raised-button color="accent">Buttons</button>
+  <button mat-mini-fab color="accent">
+    <mat-icon>send</mat-icon>
+</button>
+</mat-card>
+<hr>
+<h3>like or dislike</h3>
+<mat-card class="card-pic">
+    <mat-button-toggle-group>
+      <mat-button-toggle value="good"><mat-icon>thumb_up</mat-icon></mat-button-toggle>
+      <mat-button-toggle value="bad"><mat-icon>thumb_down</mat-icon></mat-button-toggle>
+    </mat-button-toggle-group>
+  </mat-card>
+
+  <h3>grid list</h3>
+  <mat-card class="card-pic">
+      <mat-grid-list cols="5">
+       <mat-grid-tile [style.border-right]="'1px dashed #ddd'">
+         John
+       </mat-grid-tile>
+       <mat-grid-tile [style.border-right]="'1px dashed #ddd'">
+         Paul
+       </mat-grid-tile>
+       <mat-grid-tile [style.border-right]="'1px dashed #ddd'">
+         Ringo
+       </mat-grid-tile>
+       <mat-grid-tile [style.border-right]="'1px dashed #ddd'">
+          Ringo
+        </mat-grid-tile>
+        <mat-grid-tile>
+            Ringo
+          </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card>
+
+    <h3>icons</h3>
+    <mat-card class="card-pic">
+        <mat-icon>translate</mat-icon>
+        <mat-icon>hearing</mat-icon>
+        <mat-icon>audiotrack</mat-icon>
+        <mat-icon>mail</mat-icon>
+        <mat-icon>adjust</mat-icon>
+        <mat-icon>dock</mat-icon>
+        <mat-icon>camera</mat-icon>
+      </mat-card>
+
+    <!-- <h3>input</h3>
+    <mat-card>
+        <mat-form-field>
+          <input mdInput placeholder="Your Text" dividerColor="accent">
+        </mat-form-field>
+      </mat-card> -->
+
+      <h3>card lists</h3>
+      <mat-card class="card-pic">
+        <mat-list>
+          <mat-list-item>
+            <img mat-list-avatar src="https://i.ytimg.com/vi/88tgsXO1Nug/hqdefault.jpg" alt="Desc 1">
+            <h3 mat-line>Title 1</h3>
+            <p mat-line>
+              <span>An awesome description</span>
+            </p>
+          </mat-list-item>
+      
+          <mat-list-item>
+            <img mat-list-avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEys0oLnmOh217Q195UyWikdhnh9GWECUkp9yjOUpKRkLVZSMA" alt="Desc 2">
+            <h3 mat-line>Title 2</h3>
+            <p mat-line>
+              <span>Another awesome description</span>
+            </p>
+          </mat-list-item>
+      
+          <mat-list-item>
+            <img mat-list-avatar src="https://i.pinimg.com/originals/f0/cd/89/f0cd89f679af6e1b004d9f00d96d18ae.jpg" alt="Desc 3">
+            <h3 mat-line>Title 3</h3>
+            <p mat-line>
+              <span>Yet another awesome description</span>
+            </p>
+          </mat-list-item>
+        </mat-list>
+      </mat-card>
+
+      <h3>card menu</h3>
+      <mat-card class="card-pic">
+        <button mat-raised-button [mat-menu-trigger-for]="menu">
+           Menu
+        </button>
+      
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Profile</button>
+            <button mat-menu-item>Settings</button>
+            <button mat-menu-item>Account</button>
+            <button mat-menu-item>Sign Out</button>
+        </mat-menu>
+      </mat-card>
+    
+      <h3>progress circle</h3>
+      <mat-card class="card-pic">
+        <mat-grid-list cols="3">
+         <mat-grid-tile>
+           <mat-progress-spinner mode="indeterminate" color="accent"></mat-progress-spinner>
+         </mat-grid-tile>
+         <mat-grid-tile>
+           <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+         </mat-grid-tile>
+         <mat-grid-tile>
+           <mat-progress-spinner mode="indeterminate" color="accent"></mat-progress-spinner>
+         </mat-grid-tile>
+        </mat-grid-list>
+      </mat-card>
+
+      <h3>progress bar</h3>
+      <mat-card class="card-pic">
+        <p>
+          <mat-progress-bar mode="indeterminate">
+          </mat-progress-bar>
+        </p>
+        <p>
+          <mat-progress-bar mode="buffer" value="34" bufferValue="50">
+          </mat-progress-bar>
+        </p>
+        <p>
+          <mat-progress-bar mode="query">
+          </mat-progress-bar>
+        </p>
+        <p>
+          <mat-progress-bar mode="determinate" value="65" color="accent">
+          </mat-progress-bar>
+        </p>
+      </mat-card>
+
+      <h3>tabs</h3>
+      <mat-card class="card-pic">
+        <mat-tab-group [selectedIndex]="2">
+          <mat-tab label="Breakfast">
+            <h3>Breakfast option</h3>
+            <p>Toast /w peanut butter</p>
+          </mat-tab>
+          <mat-tab label="Lunch">
+            <h3>Lunch option</h3>
+            <p>Club sandwich</p>
+          </mat-tab>
+          <mat-tab label="Dinner">
+            <h3>Dinner option</h3>
+            <p>Lasagna</p>
+          </mat-tab>
+        </mat-tab-group>
+      </mat-card>
+
+      
